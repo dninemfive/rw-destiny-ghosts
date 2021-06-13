@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <thingClass>D9DestinyGhosts.Ghost</thingClass>
+    <defName>D9DG_Ghost</defName>
+    <label>ghost</label>
+    <description>A hovering sapient companion. todo: add more description</description>
+    <techLevel>Ultra</techLevel>
+    <!--comps>
+      might need some for gizmos or something, but most logic should be in the thingclass
+	  could use the bio-link or whatever to restrict it to the initial wearer? if so, have reprogramming mechanics with archotech whatever
+    </comps-->
+    <!--verbs>
+		similarly, maybe a verb for bonding or some kind of scan ability? not planned atm
+    </verbs-->
+    <!--recipeMaker> 
+		if I ever make the archotech part of CTM, will be craftable under the artifact crafting rules; otherwise, quest reward only
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>SmokepopBelt</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+    </costList-->
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/SmokepopBelt/SmokepopBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToMake>1200000</WorkToMake>
+      <Mass>3</Mass>
+      <Flammability>0</Flammability>
+      <EquipDelay>0.1</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.01</generateAllowChance>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li> <!-- todo: find some obscure non-overlapping part -->
+      </layers>
+      <tags>
+        <li>D9DestinyGhostTag</li> <!-- Put this on faction leaders, low commonality; somewhat more common among Royalty Empire peeps, very common among JDS' better empire thing, slightly more common among Eliksni -->
+      </tags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.6,0.4,0.4,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.6,0.6,0.4,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3,1)</min>
+          <max>(0.5,0.5,0.5,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+</Defs>
